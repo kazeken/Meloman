@@ -14,5 +14,7 @@ namespace WindowsFormsApp2
         public string MiddleName { get; set; }
         public string IIN { get; set; }
         public int OrganizationsId { get; set; }
+
+        public virtual Organizations Organizations { get; set; } = null!;
     }
 }

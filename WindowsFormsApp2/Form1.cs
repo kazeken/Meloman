@@ -13,7 +13,7 @@ namespace WindowsFormsApp2
 {
     public partial class MainForm : Form
     {
-        private AppDBContext dbContext;
+        private AppDBContext? dbContext;
 
         public MainForm()
         {

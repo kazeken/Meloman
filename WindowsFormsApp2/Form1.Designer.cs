@@ -45,12 +45,12 @@ namespace WindowsFormsApp2
             this.employeesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewOrganizations = new System.Windows.Forms.DataGridView();
-            this.dataGridViewEmployees = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iNNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewEmployee = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +65,7 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.organizationsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganizations)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // employeesBindingSource
@@ -103,7 +103,7 @@ namespace WindowsFormsApp2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(460, 383);
+            this.button1.Location = new System.Drawing.Point(271, 383);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 34);
@@ -113,7 +113,7 @@ namespace WindowsFormsApp2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(573, 383);
+            this.button2.Location = new System.Drawing.Point(374, 383);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 34);
@@ -152,7 +152,7 @@ namespace WindowsFormsApp2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(599, 9);
+            this.label3.Location = new System.Drawing.Point(416, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 6;
@@ -169,32 +169,13 @@ namespace WindowsFormsApp2
             this.addressDataGridViewTextBoxColumn,
             this.noteDataGridViewTextBoxColumn});
             this.dataGridViewOrganizations.DataSource = this.organizationsBindingSource;
-            this.dataGridViewOrganizations.Location = new System.Drawing.Point(40, 29);
+            this.dataGridViewOrganizations.Location = new System.Drawing.Point(55, 53);
             this.dataGridViewOrganizations.Name = "dataGridViewOrganizations";
             this.dataGridViewOrganizations.RowHeadersWidth = 51;
             this.dataGridViewOrganizations.RowTemplate.Height = 24;
-            this.dataGridViewOrganizations.Size = new System.Drawing.Size(269, 321);
+            this.dataGridViewOrganizations.Size = new System.Drawing.Size(240, 325);
             this.dataGridViewOrganizations.TabIndex = 7;
             this.dataGridViewOrganizations.SelectionChanged += new System.EventHandler(this.dataGridViewOrganizations_SelectionChanged);
-            // 
-            // dataGridViewEmployees
-            // 
-            this.dataGridViewEmployees.AutoGenerateColumns = false;
-            this.dataGridViewEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.middleNameDataGridViewTextBoxColumn,
-            this.iINDataGridViewTextBoxColumn,
-            this.organizationsIdDataGridViewTextBoxColumn});
-            this.dataGridViewEmployees.DataSource = this.employeesBindingSource1;
-            this.dataGridViewEmployees.Location = new System.Drawing.Point(396, 29);
-            this.dataGridViewEmployees.Name = "dataGridViewEmployees";
-            this.dataGridViewEmployees.RowHeadersWidth = 51;
-            this.dataGridViewEmployees.RowTemplate.Height = 24;
-            this.dataGridViewEmployees.Size = new System.Drawing.Size(486, 321);
-            this.dataGridViewEmployees.TabIndex = 8;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -236,6 +217,24 @@ namespace WindowsFormsApp2
             this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             this.noteDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewEmployee
+            // 
+            this.dataGridViewEmployee.AutoGenerateColumns = false;
+            this.dataGridViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.middleNameDataGridViewTextBoxColumn,
+            this.iINDataGridViewTextBoxColumn,
+            this.organizationsIdDataGridViewTextBoxColumn});
+            this.dataGridViewEmployee.DataSource = this.employeesBindingSource;
+            this.dataGridViewEmployee.Location = new System.Drawing.Point(343, 53);
+            this.dataGridViewEmployee.Name = "dataGridViewEmployee";
+            this.dataGridViewEmployee.RowHeadersWidth = 51;
+            this.dataGridViewEmployee.Size = new System.Drawing.Size(240, 325);
+            this.dataGridViewEmployee.TabIndex = 8;
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -290,8 +289,8 @@ namespace WindowsFormsApp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 450);
-            this.Controls.Add(this.dataGridViewEmployees);
+            this.ClientSize = new System.Drawing.Size(631, 450);
+            this.Controls.Add(this.dataGridViewEmployee);
             this.Controls.Add(this.dataGridViewOrganizations);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
@@ -309,7 +308,7 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.organizationsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganizations)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,7 +330,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.BindingSource employeesBindingSource2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewOrganizations;
-        private System.Windows.Forms.DataGridView dataGridViewEmployees;
+        private System.Windows.Forms.DataGridView dataGridViewEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iNNDataGridViewTextBoxColumn;
