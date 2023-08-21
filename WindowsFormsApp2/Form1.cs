@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,13 +55,17 @@ namespace WindowsFormsApp2
         {
             if (this.dbContext != null)
             {
-                var organizations = (Organizations)this.dataGridViewOrganizations.CurrentRow.DataBoundItem;
+                var organization = (Organizations)this.dataGridViewOrganizations.CurrentRow.DataBoundItem;
 
-                if (organizations != null)
+                if (organization != null)
                 {
-                    this.dbContext.Entry(organizations).Collection(emp => emp.Employees).Load();
+                    this.dbContext.Entry(organization).Collection(emp => emp.Employees).Load();
                 }
             }
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+        
     }
 }
